@@ -1,0 +1,17 @@
+:root {
+	--mint: #f0fff1;
+	--brown: #361c1c;
+	--grey: #90877a;
+}
+
+.mint {
+	background-color: var(--mint);
+}
+
+.brown {
+	background-color: var(--brown);
+}
+
+.grey {
+	background-color: var(--grey);
+}
