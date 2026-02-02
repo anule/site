@@ -1,7 +1,7 @@
 :root {
-	--mint: #f0fff1;
+	--mint: #eaf9d9;
 	--brown: #361c1c;
-	--grey: #90877a;
+	--grey: #E3EBE7;
 }
 
 .mint {
@@ -14,4 +14,67 @@
 
 .grey {
 	background-color: var(--grey);
+}
+
+.layout {
+	display: grid;
+	gap: 1em;
+	grid-template-rows: auto 1fr auto;
+	min-height: 100vh;
+	width: 90%;
+	margin: 0 auto;
+	grid-template-areas: 
+		'header'
+		'main'
+		'footer';
+}
+
+a {
+	text-decoration: none;
+}
+
+.layout > * {
+	padding: 1.5em;
+}
+
+@media (min-width: 40em) {
+	.layout {
+		grid-template-columns: 12em 1fr;
+		grid-template-rows: 1fr auto;
+		grid-template-areas:
+			'header main'
+			'header footer'
+		;
+	}
+}
+
+header {
+	grid-area: header;
+}
+
+main {
+	margin-top: 10em;
+	grid-area: main;
+}
+
+footer {
+	grid-area: footer;
+}
+
+footer p {
+	width: 30;
+	display: inline;
+}
+
+.footer-links {
+	display: inline-flex;
+	flex-direction: row;
+	width: 70%;
+	justify-content: space-between;
+}
+
+.footer-links li {
+	list-style: none;
+	display: inline;
+	width: fit-content;
 }
