@@ -1,7 +1,18 @@
 :root {
 	--mint: #eaf9d9;
+	--deepermint: #D9F4BB;
 	--brown: #361c1c;
 	--grey: #E3EBE7;
+	--heading: "Oswald", sans-serif;
+	--main: "Quattrocentro", serif;
+	--base-size: 1rem;
+    --scale: 1.2;
+    --h1: calc(var(--h2) * var(--scale));
+    --h2: calc(var(--h3) * var(--scale));
+    --h3: calc(var(--h4) * var(--scale));
+    --h4: calc(var(--h5) * var(--scale));
+    --h5: calc(var(--h6) * var(--scale));
+    --h6: var(--base-size);
 }
 
 .mint {
@@ -16,12 +27,48 @@
 	background-color: var(--grey);
 }
 
+body {
+	font-family: var(--main);
+	font-size: var(--base-size);
+    line-height: 1.5;
+    color: var(--brown);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading);
+}
+
+h1 {
+    font-size: var(--h1);
+}
+h2 {
+    font-size: var(--h2);
+}
+h3 {
+    font-size: var(--h3);
+}
+h4 {
+    font-size: var(--h4);
+}
+h5 {
+    font-size: var(--h5);
+}
+h6 {
+    font-size: var(--h6);
+}
+
 .layout {
+	background-color: var(--mint);
 	display: grid;
 	gap: 1em;
 	grid-template-rows: auto 1fr auto;
 	min-height: 100vh;
-	width: 90%;
+	width: 100%;
 	margin: 0 auto;
 	grid-template-areas: 
 		'header'
@@ -39,8 +86,8 @@ a {
 
 @media (min-width: 40em) {
 	.layout {
-		grid-template-columns: 12em 1fr;
-		grid-template-rows: 1fr auto;
+		grid-template-columns: 20em 1fr;
+		grid-template-rows: 2fr auto;
 		grid-template-areas:
 			'header main'
 			'header footer'
@@ -49,12 +96,24 @@ a {
 }
 
 header {
+	background-color: var(--deepermint);
 	grid-area: header;
 }
 
+header h1 {
+	width: fit-content;
+	margin: 5em auto 0;
+	color: var(--brown);
+	text-transform: uppercase;
+}
 main {
-	margin-top: 10em;
+	margin-top: 5em;
 	grid-area: main;
+}
+
+section {
+	margin: 3em auto;
+	padding: 0 5em;
 }
 
 footer {
