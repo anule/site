@@ -27,11 +27,16 @@
 	background-color: var(--grey);
 }
 
+html {
+	background-color: var(--mint);
+	color: var(--brown);
+}
+
 body {
 	font-family: var(--main);
 	font-size: var(--base-size);
     line-height: 1.5;
-    color: var(--brown);
+
 }
 
 h1,
@@ -93,6 +98,10 @@ a {
 			'header footer'
 		;
 	}
+
+	header {
+		margin: 5em auto 0;
+	}
 }
 
 header {
@@ -102,13 +111,15 @@ header {
 
 header h1 {
 	width: fit-content;
-	margin: 5em auto 0;
-	color: var(--brown);
 	text-transform: uppercase;
 }
 main {
 	margin-top: 5em;
 	grid-area: main;
+}
+
+aside {
+	grid-area: asides;
 }
 
 section {
