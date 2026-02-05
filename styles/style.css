@@ -85,10 +85,6 @@ a {
 	text-decoration: none;
 }
 
-.layout > * {
-	padding: 1.5em;
-}
-
 @media (min-width: 40em) {
 	.layout {
 		grid-template-columns: 20em 1fr;
@@ -100,7 +96,11 @@ a {
 	}
 
 	header {
-		margin: 5em auto 0;
+		padding: 10em 1.5em 0;
+	}
+
+	header h1 {
+		margin: 0 auto;
 	}
 }
 
