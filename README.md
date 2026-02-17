@@ -1,6 +1,6 @@
 ## About
-Source code for https://anule.space.\
-Made with OG stack: HTML and CSS
+Source code for https://anule.space.  
+Written in HTML and CSS
 
 ### Info
 - Hosting: GitHub pages
