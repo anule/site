@@ -146,8 +146,12 @@
 
 
 header {
-  background-color: var(--green);
+  /*background-color: var(--green);*/
   grid-area: header;
+}
+
+nav {
+  background-color: var(--green);
 }
 
 header h1 {
