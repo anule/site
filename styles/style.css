@@ -1,11 +1,13 @@
-:root {
-	--mint: #eaf9d9;
-	--deepermint: #D9F4BB;
-	--brown: #361c1c;
-	--grey: #E3EBE7;
-	--heading: "Oswald", sans-serif;
-	--main: "Quattrocentro", serif;
-	--base-size: 1rem;
+@layer base {
+  :root {
+    --mint: #eaf9d9;
+    --green: #D9F4BB;
+    --brown: #361c1c;
+    --grey: #E3EBE7;
+    --maroon: #74180B;
+    --heading: "Oswald", sans-serif;
+    --main: "Quattrocentro", serif;
+    --base-size: 1rem;
     --scale: 1.2;
     --h1: calc(var(--h2) * var(--scale));
     --h2: calc(var(--h3) * var(--scale));
@@ -13,138 +15,178 @@
     --h4: calc(var(--h5) * var(--scale));
     --h5: calc(var(--h6) * var(--scale));
     --h6: var(--base-size);
-}
+  }
 
-.mint {
-	background-color: var(--mint);
-}
+  .mint {
+    background-color: var(--mint);
+  }
 
-.brown {
-	background-color: var(--brown);
-}
+  .brown {
+    background-color: var(--brown);
+  }
 
-.grey {
-	background-color: var(--grey);
-}
+  .grey {
+    background-color: var(--grey);
+  }
 
-html {
-	background-color: var(--mint);
-	color: var(--brown);
-}
+  .green {
+    background-color: var(--green);
+  }
 
-body {
-	font-family: var(--main);
-	font-size: var(--base-size);
+  .maroon {
+    background-color: var(--maroon);
+  }
+
+  html {
+    background-color: var(--mint);
+    color: var(--brown);
+  }
+
+  body {
+    font-family: var(--main);
+    font-size: var(--base-size);
     line-height: 1.5;
 
-}
+  }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--heading);
-}
+  }
 
-h1 {
+  h1 {
     font-size: var(--h1);
-}
-h2 {
+  }
+
+  h2 {
     font-size: var(--h2);
-}
-h3 {
+  }
+
+  h3 {
     font-size: var(--h3);
-}
-h4 {
+  }
+
+  h4 {
     font-size: var(--h4);
-}
-h5 {
+  }
+
+  h5 {
     font-size: var(--h5);
-}
-h6 {
+  }
+
+  h6 {
     font-size: var(--h6);
+  }
+
+  .colors {
+    display: flex;
+    gap: 20px;
+  }
+
+  .colors>* {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+  }
+
+  a {
+    color: var(--brown);
+  }
+
+  a:hover {
+    color: var(--maroon);
+  }
 }
 
 .layout {
-	background-color: var(--mint);
-	display: grid;
-	gap: 1em;
-	grid-template-rows: auto 1fr auto;
-	min-height: 100vh;
-	width: 100%;
-	margin: 0 auto;
-	grid-template-areas: 
-		'header'
-		'main'
-		'footer';
+  background-color: var(--mint);
+  display: grid;
+  gap: 1em;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
 }
 
-a {
-	text-decoration: none;
-}
 
 @media (min-width: 40em) {
-	.layout {
-		grid-template-columns: 20em 1fr;
-		grid-template-rows: 2fr auto;
-		grid-template-areas:
-			'header main'
-			'header footer'
-		;
-	}
+  .layout {
+    grid-template-columns: 20em 1fr;
+    grid-template-rows: 2fr auto;
+    grid-template-areas:
+      'nav header'
+      'nav main'
+      'nav footer'
+    ;
+  }
 
-	header {
-		padding: 10em 1.5em 0;
-	}
+  header {
+    padding: 10em 1.5em 0;
+  }
 
-	header h1 {
-		margin: 0 auto;
-	}
+  header h1 {
+    margin: 0 auto;
+  }
 }
 
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+
 header {
-	background-color: var(--deepermint);
-	grid-area: header;
+  background-color: var(--green);
+  grid-area: header;
 }
 
 header h1 {
-	width: fit-content;
-	text-transform: uppercase;
+  width: fit-content;
+  text-transform: uppercase;
 }
+
 main {
-	margin-top: 5em;
-	grid-area: main;
+  margin-top: 5em;
+  grid-area: main;
 }
 
 aside {
-	grid-area: asides;
+  grid-area: asides;
 }
 
 section {
-	margin: 3em auto;
-	padding: 0 5em;
+  margin: 3em auto;
+  padding: 0 5em;
 }
 
 footer {
-	grid-area: footer;
+  grid-area: footer;
 }
 
 footer p {
-	width: 30;
-	display: inline;
+  width: 30;
+  display: inline;
 }
 
 .footer-links {
-	display: inline-flex;
-	flex-direction: row;
-	width: 70%;
-	justify-content: space-between;
+  display: inline-flex;
+  flex-direction: row;
+  width: 70%;
+  justify-content: space-between;
 }
 
 .footer-links li {
-	list-style: none;
-	display: inline;
-	width: fit-content;
+  list-style: none;
+  display: inline;
+  width: fit-content;
 }
