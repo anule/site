@@ -137,6 +137,10 @@
   header h1 {
     grid-column: 2;
   }
+
+  aside {
+    display: block;
+    background-color: var(--green);
 }
 
 
@@ -163,7 +167,7 @@ main {
 }
 
 aside {
-  background-color: var(-green);
+  display: none;
   grid-area: aside;
 }
 
