@@ -122,21 +122,21 @@
     grid-template-columns: 20em 1fr;
     grid-template-rows: 2fr auto;
     grid-template-areas:
-      'header header'
+      'aside header'
       'aside main'
       'aside footer'
     ;
   }
 
-  header {
+  /* header {
     display: grid;
     gap: 1em;
     grid-template-columns: 20em 1fr;
-  }
-
+  } */
+/* 
   header h1 {
     grid-column: 2;
-  }
+  } */
 
   aside {
     display: block;
