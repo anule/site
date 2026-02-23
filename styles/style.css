@@ -142,6 +142,10 @@
     display: block;
     background-color: var(--green);
   }
+
+  sheader nav {
+    display: none;
+  }
 }
 
 
@@ -161,6 +165,8 @@ header h1 {
   width: fit-content;
   text-transform: uppercase;
 }
+
+
 
 main {
   margin-top: 5em;
