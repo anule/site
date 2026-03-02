@@ -10,6 +10,7 @@
     --main: "Quattrocentro", serif;
     --base-size: 1rem;
     --scale: 1.2;
+
     --h1: calc(var(--h2) * var(--scale));
     --h2: calc(var(--h3) * var(--scale));
     --h3: calc(var(--h4) * var(--scale));
@@ -39,7 +40,7 @@
   }
 
   html {
-    background-color: var(--mint);
+    background-color: var(--white);
     color: var(--brown);
   }
 
