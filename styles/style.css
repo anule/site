@@ -129,7 +129,7 @@
 header {
   /*background-color: var(--green);*/
   grid-area: header;
-  background: linear-gradient(var(--mint) 50%, var(--white));
+  background: linear-gradient(var(--green) 50%, var(--white));
 }
 
 header h1 {
