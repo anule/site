@@ -6,12 +6,10 @@ document.querySelectorAll('.hover-halo').forEach(el => {
         let posX = e.clientX - rect.left;
         let posY = e.clientY - rect.top;
         
-        el.style.setProperty('--x', posX + 'px');
-        el.style.setProperty('--y', posY + 'px');
-        el.style.setProperty('--radius', '70px')
+        el.style.background = `radial-gradient(circle at ${posX}px ${posY}px, #D9F4BB 0%, #fffaf0 ${radius})`
     })
     
     el.addEventListener('mouseleave', function() {
-        el.style.removeProperty('--radius')
+        el.style = ''
     })
 })

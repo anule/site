@@ -206,7 +206,7 @@ footer p {
 
 @media (min-width: 40em) {
   .layout {
-    grid-template-columns: 20em 1fr;
+    grid-template-columns: 18em 1fr;
     grid-template-rows: 8em auto;
     grid-template-areas:
       'aside header'
@@ -230,6 +230,7 @@ footer p {
     gap: 1em;
     grid-template-rows: 8em auto;
     background-color: var(--green);
+    background: linear-gradient(to right, var(--green), var(--mint) 60%, var(--white) 100%);
   }
 
   aside nav {
@@ -260,6 +261,7 @@ footer p {
     font-family: var(--heading);
     text-decoration: none;
     width: 100%;
+    margin-left: 3.5rem;
   }
   
   aside nav li a:hover {
@@ -272,6 +274,8 @@ footer p {
 
   main {
     margin-top: 0;
+    border-radius: 15px;
+    margin-right: 1rem;
   }
 
   .footer-links {
@@ -282,7 +286,6 @@ footer p {
 
 
 .hover-halo {
-  background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), var(--mint) 0%, var(--green) calc(0% + 100px) var(--radius, 0px));
   transition: --radius 0.3s ease-out;
 }
 
